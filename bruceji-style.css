@@ -1,78 +1,115 @@
+/* COLOURS
+EOECE4
+F7F2E7
+D8D3CD
+797A7E
+*/
+
+
 body {
-    background-color: dimgray;
+    background-color: #E0ECE4;
 }
 
-
-/*Mountains*/
-
-.mtn-container {
-    position:absolute;
-    left:300px;
-    top: 200px;
-    z-index: -1;
-}
-.mtn-cont-1 {
-    --mount-shade: #BBB;
-}
-.mtn-cont-2 {
-    transform:translate(300px) scale(0.8);
-    --mount-shade: #DDD;
+.center-heading {
     
+}
+
+.mountain-background {
+    position: absolute;
+    width:100vw;
+    height:50vh;
+    background: linear-gradient(0deg, #E0ECE4, aliceblue);
 }
 .mtn-ground {
-    position: absolute;
-    background-color: antiquewhite;
-    width:100%;
-    height:50vh;
-    top:400px;
-    z-index: 0;
+/*    background-color: aliceblue;*/
+    height:100px;   
 }
-.mtn-bk-top{
-    background-color:lightgrey;
-    width: 600px;
-    height: 600px;
-    transform: rotate(45deg);
-    
-}
-.mtn-square {
-    background-color:var(--mount-shade);
-/*    width:300px;*/
+
+/*Mountains*/
+.mtn-container-1 {
     position: absolute;
-/*    transform: rotate(45deg);*/
-}
-.mtn-1 {
-    width:400px;
-    height:300px;
-    position: absolute;
-    left: 200px;
-/*    background-color: aqua;*/
-    
+/*    background-origin: border-box;*/
+    right:800px;
+    top:79px;
+
 
 }
-.mtn-2 {
-    width:300px;
-    height:300px;
+.mtn-container-2 {
     position: absolute;
-    left:100px;
-    top: 100px;
-/*    background-color: red;*/
-    margin-right: 30%;  
+    left:2vw;
+    top:199px;
+    transform: scale(0.7);
 }
-.mtn-3 {
-    width:200px;
-    height:300px;
+
+.mtn-container-3 {
     position: absolute;
-    left:0px;
-    top: 250px;
-/*    background-color: blue;*/
-    margin-right: 30%; 
+    left:15vw;
+    margin-left: 200px;
+    top: 279px;
+    transform: scale(0.5);
 }
-.mtn-4 {
+
+.tri-mtn-3 {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+  
+    border-bottom: 400px solid #B8B3BD;
+
+}
+
+.tri-mtn-1 {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+  
+    border-bottom: 400px solid #D8D3CD;
+}
+.tri-mtn-2 {
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+  
+    border-bottom: 400px solid #797A7E;
+}
+
+.mtn-snow-container {
+    position: absolute;
+    transform: rotate(45deg);
+    left: 400px;
+    --snow-colour: #F7F2E7
+}
+.mtn-snow-1 {
+    position: absolute;
+    background-color: var(--snow-colour);
+    width: 300px;
+    height: 100px;
+    
+}
+.mtn-snow-2 {
+    position: absolute;
+    background-color: var(--snow-colour);
+    width: 200px;
+    height: 100px;
+    top:100px;   
+}
+.mtn-snow-3 {
+    position: absolute;
+    background-color: var(--snow-colour);
     width: 50px;
     height: 50px;
-/*    background-color:red;*/
-    position:absolute;
-    left:50px;
-    top: 200px;
-    
+    top:200px;   
+}
+.mtn-snow-4 {
+    position: absolute;
+    background-color: var(--snow-colour);
+    width: 50px;
+    height: 25px;
+    left:300px;   
 }
