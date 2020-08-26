@@ -1,8 +1,9 @@
 .mountain-background {
     position: absolute;
     width:100%;
-    height:51vh;
+    height:700px;
     background: linear-gradient(0deg, #E0ECE4, aliceblue);
+    overflow-x: hidden;
 
 }
 .mtn-ground {
@@ -23,6 +24,7 @@
     left:2vw;
     top: 79px;
     z-index: 1;
+
 }
 .mtn-rear-1{
     position: absolute;
@@ -78,6 +80,7 @@
     left:35%;
     top:310px;
     z-index:2;
+
 }
 .mtn-mid-1 {
     position: absolute;
