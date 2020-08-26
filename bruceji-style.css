@@ -1,123 +1,37 @@
-/* COLOURS
-EOECE4
-F7F2E7
-D8D3CD
-797A7E
-*/
-
-
 body {
     background-color: #E0ECE4;
     overflow-x: hidden;
     margin: 0px;
 }
-
-.center-heading {
-    
-}
-
-.mountain-background {
+.heading-cont {
     position: absolute;
+    top: 100px;
+    z-index:4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:350px;
     width:100%;
-    height:50vh;
-    background: linear-gradient(0deg, #E0ECE4, aliceblue);
-}
-.mtn-ground {
-    position:absolute;
-    top:450px;
-    left:0px;    
-    background-color: #c6cbbb;
-    height:300px;
-    width: 100%;
-    z-index: -1;
+    font-family: "Arial Black", sans-serif;
+    color: #3c4a5b;
 }
 
-/*Mountains*/
-
-/*Rear mountain/big one*/
-.mtn-rear-container{
-
-    position: absolute;
-    left:2vw;
-    top: 79px;
-}
-.tri-mtn-lg {
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    border-left: 400px solid transparent;
-    border-right: 400px solid transparent;
-  
-    border-bottom: 400px solid #e6e4e8;
-}
-
-/*Midde mountain/small one*/
-.mtn-mid-container {
-    position: absolute;
-    left:35%;
-    top:310px;
-    transform: scale(0.5);
-}
-.tri-mtn-sm {
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    border-left: 400px solid transparent;
-    border-right: 400px solid transparent;
-  
-    border-bottom: 400px solid #B8B3BD;
-
-}
-
-/*Front Mountain/medium one*/
-.mtn-fore-container {
-    position: absolute;
-    right:750px;
-    top:270px;
-    transform: scale(0.7);
-}
-.tri-mtn-md {
-    position: absolute;
-    width: 0; 
-    height: 0; 
-    border-left: 400px solid transparent;
-    border-right: 400px solid transparent;
-  
-    border-bottom: 400px solid #a097a9;
-}
-
-/*Mtn snow*/
-.mtn-snow-container {
-    position: absolute;
-    transform: rotate(45deg);
-    left: 400px;
-    --snow-colour: #F7F2E7
-}
-.mtn-snow-1 {
-    position: absolute;
-    background-color: var(--snow-colour);
-    width: 300px;
-    height: 100px;
+.heading-cont h1{
     
+    z-index: 1;
+    font-size: 70pt;
+    
+/*    align-self: center;*/
 }
-.mtn-snow-2 {
-    position: absolute;
-    background-color: var(--snow-colour);
-    width: 200px;
-    height: 100px;
-    top:100px;   
+.heading-cont h2 {
+    z-index: 1;
+    font-size: 50pt;
+    margin-top: -60px;
 }
-.mtn-snow-3 {
-    position: absolute;
-    background-color: var(--snow-colour);
-    width: 50px;
-    height: 50px;
-    top:200px;   
-}
-.mtn-snow-4 {
-    position: absolute;
-    background-color: var(--snow-colour);
-    width: 50px;
-    height: 25px;
-    left:300px;   
+
+
+.bkg-spacer {
+    height:700px;
+    width:auto;
 }
