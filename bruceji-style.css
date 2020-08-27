@@ -2,36 +2,71 @@ body {
     background-color: #E0ECE4;
     overflow-x: hidden;
     margin: 0px;
+    color: #3c4a5b;
 }
 .heading-cont {
     position: absolute;
-    top: 100px;
+    top:0px;
     z-index:4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:350px;
+    height:auto;
     width:100%;
     font-family: "Arial Black", sans-serif;
-    color: #3c4a5b;
+/*    color: #3c4a5b;*/
 }
-
-.heading-cont h1{
+.name-cont {
+    display: flex;
+    justify-content: center;
+}
+.name-cont h1{
     
     z-index: 1;
     font-size: 70pt;
+    text-align: center;
     
 /*    align-self: center;*/
 }
-.heading-cont h2 {
+.title-cont {
+    display: flex;
+    justify-content: center;
+}
+.title-cont h2 {
     z-index: 1;
     font-size: 50pt;
     margin-top: -60px;
+    text-align: center;
 }
 
 
 .bkg-spacer {
     height:700px;
     width:auto;
+}
+.title-container {
+    display: flex;
+    justify-content: center;
+}
+.title-container h3{
+    font-family: "Arial", sans-serif;
+    font-size: 26pt;
+}
+.about-cards-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-cell {
+    background-color: #afbfc3;
+    border-radius: 10px;
+    
+    font-family: "Arial", sans-serif;
+    font-size: 13pt;
+    width: 20%;
+    margin: 30px;
+    padding: 20px;
+}
+.projects-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
