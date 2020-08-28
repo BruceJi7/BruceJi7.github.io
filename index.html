@@ -194,48 +194,126 @@
     </div>"
     <div class="bkg-spacer"></div>
     <div class="heading-cont">
-        <div class="name-cont">
+        <div class="heading-name">
             <h1>TOBIAS SAMPLE</h1>          
         </div>
-         <div class="title-cont">
+         <div class="heading-subtitle">
              <h2>Full Stack Dev</h2>
          </div>
      </div>
       
     </header>
     <main>
-        <div class="title-container">
-            <h3>
-                About Me
-            </h3>
-        </div>
-
-        <div class="about-cards-panel">
-            <div class="about-cell">
-                <p>I'm Tobias.</p>
-                <p>I'm from the UK, living in Korea.</p>
-                <p>안녕하세요? 한국어도 가능해요!</p>
+        <section id="about-me">
+            <div class="title-container">
+                <h3>
+                    About Me
+                </h3>
             </div>
-            <div class="about-cell">
-                <p>
-                    I build sites with Flask and Python.
-                </p>
-                <p>
-                    I like Bootstrap for frontend, but sometimes custom CSS and JS is the way to go.
-                </p>
-
-                <p>
-                    I love taking things apart and putting them back together.<br>
-                    It doesn't matter what - language, bikes, martial arts - I have to break it down and see what each piece does.<br>That's the way I learn.
-                </p>
+            <div class="title-container">
+                <div class="title-underline"></div>
             </div>
-        </div>
-        <div class="title-container">
-            <h3>Projects</h3>
-        </div>
-        <div class="projects-panel">
-            
-        </div>
+
+
+            <div class="about-cards-panel">
+                <div class="about-cell">
+                   <div class="pic-cell">
+                       <img class="profile-pic" src="tobias_photo.png" alt="Picture of Tobias in the mountains looking thoughtful">
+                    </div>
+                    <p>Hi, I'm Tobias.</p>
+                    <p>I'm from the UK, living in Korea.</p>
+                    <p>I like pizza and pasta.</p>
+                    <p>I play the guitar, and I do Judo.</p>
+                    <p>I have an MA in Animation and a BA in Multimedia.</p>
+                </div>
+                <div class="about-cell">
+                    <p>
+                        I build sites with Flask and Python.
+                    </p>
+                    <p>
+                        I like Bootstrap for frontend, but sometimes custom CSS and JS is the way to go.
+                    </p>
+
+                    <p>
+                        I love taking things apart and putting them back together.<br>
+                        It doesn't matter what - language, bikes, martial arts - I have to break it down and see what each piece does.<br>That's the way I learn.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+           
+            <div class="skills-panel">
+                <!--Skills Title-->
+                <div class="title-container skills-title">
+                    <h3>Skills</h3>
+                </div>
+                <div class="title-container">
+                    <div class="title-underline skills-line"></div>
+                </div>
+                <div class="skills-table">
+                    <div class="skill-col">Python</div>
+                    <div class="skill-col">Flask</div>
+                    <div class="skill-col">JS</div>
+                    
+                    <div class="skill-col"><img src="python-logo.png" alt="The Python Language Logo"></div>
+                    <div class="skill-col"><img src="flask-logo.png" alt="The Flask framework logo"></div>
+                    <div class="skill-col"><img src="js-logo.png" alt="The logo for Javascript"></div>
+                    
+                    <div class="skill-col grid-spacer"></div>
+                    
+                    <div class="skill-col">Bootstrap</div>
+                    <div class="skill-col">CSS</div>
+                    <div class="skill-col">MySQL</div>
+                    
+                    <div class="skill-col"><img src="bootstrap-logo.png" alt="The logo for the bootstrap framework"></div>
+                    <div class="skill-col"><img src="CSS3-logo.png" alt="The logo for CSS3"></div>
+                    <div class="skill-col"><img src="mysql-logo.jpg" alt="The logo for MySQL"></div>        
+                </div>
+                      
+                    
+            </div>
+        </section>
+        
+        <section id="projects">      
+            <div class="title-container">
+                <h3>Projects</h3>
+            </div>
+            <div class="title-container">
+                <div class="title-underline"></div>
+            </div>
+
+
+            <div class="projects-panel">
+
+                <div class="project-cell">
+                    <h4>ESL Auto-Worksheet</h4>
+                    <p>Flask, REST API, Vanilla JS and Bootstrap</p>
+                    <p>Quickly produces a worksheet for an ESL teacher in a pinch.</p>
+                    <p>JS is used to provide a simple UX, such as hiding excess vocab words.</p>
+                    <p><a href="https://auto-worksheet.herokuapp.com/">Try Auto-Worksheet on Heroku.</a></p>
+                </div>
+
+                <div class="project-cell">
+                    <img src="Auto-WS_003.png" alt="A screenshot of the ESL Auto-Worksheet article select page">
+                </div>
+            </div>
+            <div class="projects-panel">
+
+                <div class="project-cell">
+                    <h4>Dr. English</h4>
+
+                    <p>Worked with a team of other skilled Frontend Devs to overhaul the styling of this ESL video tutoring service website.</p>
+                    <p>Among other things, I was responsible for the navigation bar, the login/home page, and redesigning the logo.</p>
+                    <p><a href="http://dr-english.com/UserMember/LoginPage.asp">Visit the Dr. English site.</a></p>
+                </div>
+
+                <div class="project-cell">
+                    <img src="Dr-Eng_001.png" alt="A screenshot of the Dr. English home/login page">
+                </div>
+
+            </div>
+        </section>  
     </main>
     
 </body>
