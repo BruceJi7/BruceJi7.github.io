@@ -220,7 +220,7 @@
             
             <div class="card-panel stage">
                 
-                <div class="card card-flippable" id="main-intro-card">
+                <div class="card card-flippable"  id="main-intro-card">
                     
                     <div class="card-face card-front">
                         <div class="pic-cell">
@@ -435,23 +435,33 @@
 </body>
 <script>
     (function(){
-    const stages = document.querySelectorAll('.card-flippable');
+    const cards = document.querySelectorAll('.card-flippable');
 
     function clickHandler(e){
         let cell = e.target
+        
+        
+        
 
         // Move up a level if the child cells were clicked
         while (!cell.classList.contains('card-flippable')) {
             cell = cell.parentNode
+            
             };
-        
-//        console.log(card_obj_classes);
-        cell.classList.toggle('card-flip-class');
-//        
+            console.log(cell);
+            if (cell.classList.contains('card-flip-forward')) {
+                cell.classList.remove('card-flip-forward');
+                cell.classList.add('card-flip-reverse');
+            } else {
+                cell.classList.remove('card-flip-reverse');
+                cell.classList.add('card-flip-forward');
+            }
+      
         
     };
-    for(i = 0; i < stages.length; i++) {
-        s = stages[i];
+    for(i = 0; i < cards.length; i++) {
+        s = cards[i];
+               
         s.addEventListener('click', clickHandler);
 
     };
