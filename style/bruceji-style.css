@@ -41,12 +41,17 @@ nav {
     display:flex;  
     color:white;
 }
+#menu-toggler {
+    display:none;
+}
 #nav-cells {
     list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width:100%;
+    
+    flex-direction: row;
 }
 .nav-li {
     width:150px;
@@ -78,7 +83,9 @@ nav {
     margin-left:20px;
 }
 
-
+#menu-toggler {
+    margin:7px;
+}
 .heading-cont {
     position: absolute;
     top:0px;
@@ -277,6 +284,10 @@ footer {
     .card {
         width:24%;
     }
+    #nav-cells{
+        display:flex !important;
+        flex-direction:row;
+    }
 }
 
 @media only screen and (max-width:1200px) {
@@ -321,6 +332,13 @@ footer {
     }
     .projects-panel {
         flex-wrap: wrap;
+    }
+    #menu-toggler {
+        display:block;
+    }
+    #nav-cells {
+        flex-direction:column;
+        display:none;
     }
 
 }
