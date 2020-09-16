@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tobias Sample | BruceJi7</title>
     
-<!--Bootstrap CSS-->
-<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">-->
     <link rel="stylesheet" type="text/css" href="./style/mountain-style.css">
     <link rel="stylesheet" type="text/css" href="./style/bruceji-style.css">
 
 </head>
-<body>
+<body class="daytime">
    
     <header>
+    <nav id="nav">
+        <ul id="nav-cells">
+            <li class="nav-li"><a href="#about-me">About</a></li>
+            <li class="nav-li"><a href="#skills">Skills</a></li>
+            <li class="nav-li"><a href="#projects">Projects</a></li>
+            <li class="nav-li"><a href="#footer">Links</a></li>
+            <li class="nav-li"><span>Night Mode</span><div class="daynight-switch "><div class="switch-toggler"></div></div></li>
+        </ul>
+    </nav>
     <div class="mountain-background">
         <div class="mtn-sky"></div>
+        <div id="sun" class="celestial"></div>
+        <div id="moon" class="celestial set"></div>
         <div class="mtn-rear-layer">
            
             <div class="mtn-rear-1">
@@ -40,19 +49,7 @@
                <div class="mtn-shadow shadow-lg"></div>
             </div>
             
-<!--
-            <div class="mtn-rear-3">
-               <div class="tri-mtn-rear"></div>
-               <div class="mtn-snow-container">
-                   <div class="mtn-snow-1"></div>
-                   <div class="mtn-snow-2"></div>
-                   <div class="mtn-snow-3"></div>
-                   <div class="mtn-snow-4"></div>
-               </div>
-               <div class="mtn-shadow shadow-lg"></div>
-            </div>
--->
-            
+        
             <div class="mtn-rear-4">
                <div class="tri-mtn-rear"></div>
                <div class="mtn-snow-container">
@@ -426,7 +423,7 @@
         </section>  
     </main>
 <footer>
-   <div class="footer-links">
+   <div id="footer" class="footer-links">
         <a href="https://www.linkedin.com/in/tobias-sample-07b86746/" target="_blank"><img id="linked-in-link-icon" src="img/linkedin-logo.png"></a>
         <a href="https://github.com/BruceJi7" target="_blank"><img id="github-link-icon" src="img/github-icon.png"></a>
    </div>
@@ -467,6 +464,30 @@
     };
     
     })();
-  
+    (function(){
+        const toggler = document.querySelector('.switch-toggler');
+        const sun = document.querySelector('#sun');
+        const moon = document.querySelector('#moon');
+        const body = document.getElementsByTagName("BODY")[0];
+
+    function clickHandler(e){
+        
+        toggler.classList.toggle("night-toggled")
+        sun.classList.toggle("set");
+        moon.classList.toggle("set");
+        
+          if (body.classList.contains('daytime')) {
+            body.classList.remove('daytime');
+            body.classList.add('nighttime');
+        } else {
+            body.classList.remove('nighttime');
+            body.classList.add('daytime');
+        }
+        
+    };
+
+    toggler.addEventListener('click', clickHandler)
+        
+    })();
 </script> 
 </html>

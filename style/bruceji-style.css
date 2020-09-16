@@ -1,13 +1,84 @@
 body {
-    background-color: #E0ECE4;
+    
     overflow-x: hidden;
     margin: 0px;
-    color: #3c4a5b;
+    
     font-family: "Arial", sans-serif;
+    
 }
+
+.daytime {
+    color: #3c4a5b;
+    background-color: #E0ECE4;
+    --card-front-bkg:#afbfc3;
+    --card-rear-bkg:#6b9099;
+    -a-color:#4e719c
+    --skills-color:#1d686e;
+    --footer-color:#6b9099;
+}
+.nighttime {
+    color: #f8ffff;
+    background-color: #7d8587;
+    --card-front-bkg:#627287;
+    --card-rear-bkg:#46566c;
+    --a-color:lightblue;
+    --skills-color:#3b414a;
+    --footer-color:#5d637c;
+}
+
 a {
-    color: #4e719c;
+    color: var(--a-color);
+    text-decoration: none;
 }
+
+nav {
+    position:fixed;
+    z-index:10;
+    height:30px;
+    width: 100%;
+    background:#333;
+    
+    display:flex;  
+    color:white;
+}
+#nav-cells {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+}
+.nav-li {
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.nav-li a {
+    text-decoration: none;
+    color:white;
+}
+
+.daynight-switch{
+    background:#fff;
+    width:40px;
+    height:20px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+.switch-toggler {
+    background:#111;
+    width:18px;
+    height:18px;
+    border-radius: 50%;
+    margin-top:1px;
+    margin-left:2px;
+    transition: 0.3s;
+}
+.night-toggled {
+    margin-left:20px;
+}
+
+
 .heading-cont {
     position: absolute;
     top:0px;
@@ -108,7 +179,7 @@ a {
     width:100%;
     height: 400px;
     margin-top: 60px;
-    background-color: #1d686e;
+    background-color: var(--skills-color);
     
     font-weight: bold;
     color: #E0ECE4
@@ -183,7 +254,7 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    background-color:#6b9099;
+    background-color:var(--footer-color);
 }
 .footer-links {
     display:flex;
@@ -295,10 +366,10 @@ footer {
 }
 .card-front{
     z-index: 1;
-    background: #afbfc3;
+    background: var(--card-front-bkg);
 }
 .card-back{
-    background: #6b9099;
+    background: var(--card-rear-bkg);
     color: #E0ECE4;
     transform: rotateY(180deg);
 }

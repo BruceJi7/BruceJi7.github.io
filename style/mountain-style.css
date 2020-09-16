@@ -1,13 +1,55 @@
+body {
+    --sun-color:rgba(252,242,230,1);
+    
+    --sun-shadow:rgba(255,200,145,0.7);
+    
+    --moon-color:#eaefef;
+    
+    transition:1s;
+    
+}
+
+.daytime {
+    --sky-color:linear-gradient(0deg, #a5c6ce, aliceblue);
+    --ground-color:#767b78;
+    
+    --rear-mtn-color:#afbfc3;
+    --mid-mtn-color:#6b9099;
+    --fore-mtn-color:#1d686e;
+    
+    --snow-colour: #F7F2E7;
+    
+    --mtn-shadow-border:400px solid #444;
+    --mtn-shadow-transform:skewX(-37deg) translate(149px);
+    
+    
+}
+
+.nighttime {
+    --sky-color:linear-gradient(0deg, #313859, #bca4e1);
+    --ground-color:#55525b;
+    
+    --rear-mtn-color:#807f97;
+    --mid-mtn-color:#627287;
+    --fore-mtn-color:#46566c;
+    
+    --snow-colour: #c6c3c8;
+    
+    --mtn-shadow-border:400px solid #333;
+    --mtn-shadow-transform:skewX(40deg) translate(468px);
+}
+
+
 .mountain-background {
     position: absolute;
     width:100%;
     height:700px;
-/*    background: linear-gradient(0deg, #8f9591, aliceblue);*/
     overflow-x: hidden;
+
 }
 .mtn-sky {
     position: absolute;
-    background: linear-gradient(0deg, #a5c6ce, aliceblue);
+    background: var(--sky-color);
     top:0px;
     left:0px;
     width: 100%;
@@ -19,7 +61,7 @@
     position:absolute;
     top:450px;
     left:0px;    
-    background-color: #767b78;
+    background-color: var(--ground-color);
     height:200px;
     width: 100vw;
     z-index: 0;
@@ -77,7 +119,7 @@
     border-left: 400px solid transparent;
     border-right: 400px solid transparent;
   
-    border-bottom: 400px solid #afbfc3;
+    border-bottom: 400px solid var(--rear-mtn-color);
 }
 .shadow-lg {
     opacity: 0.2;
@@ -136,7 +178,7 @@
     border-left: 400px solid transparent;
     border-right: 400px solid transparent;
 
-    border-bottom: 400px solid #6b9099;
+    border-bottom: 400px solid var(--mid-mtn-color);
 
 }
 .shadow-sm {
@@ -180,7 +222,7 @@
     border-left: 400px solid transparent;
     border-right: 400px solid transparent;
   
-    border-bottom: 400px solid #1d686e;
+    border-bottom: 400px solid var(--fore-mtn-color);
 }
 .shadow-md {
     opacity: 0.6;
@@ -194,8 +236,8 @@
     border-left: 100px solid transparent;
     border-right: 65px solid transparent;
   
-    border-bottom:400px solid #444;
-    transform: skewX(-37deg) translate(149px);
+    border-bottom:var(--mtn-shadow-border);
+    transform:var(--mtn-shadow-transform);
 }
 
 /*Mtn snow*/
@@ -203,7 +245,7 @@
     position: absolute;
     transform: rotate(45deg);
     left: 400px;
-    --snow-colour: #F7F2E7;
+
 }
 .mtn-snow-1 {
     position: absolute;
@@ -234,3 +276,37 @@
     left:298px;   
 }
 
+.celestial {
+    z-index:0;
+    transition-duration: 1s;
+    transition-property: transform, z-index, visibility;
+}
+
+#sun {
+    position:absolute;
+    width:100px;
+    height:100px;
+    right:5vw;
+    top:50px;
+    border-radius: 50%;
+    background:var(--sun-color);
+    box-shadow: 0px 0px 23px 1px var(--sun-shadow);
+
+
+}
+#moon {
+    position:absolute;
+    width:100px;
+    height:100px;
+    left:5vw;
+    top:90px;
+    border-radius: 50%;
+    background:transparent;
+    box-shadow: 12px 5px 0 3px var(--moon-color);
+
+
+}
+.set {
+    transform:translateY(400px);
+    visibility:hidden;
+}
